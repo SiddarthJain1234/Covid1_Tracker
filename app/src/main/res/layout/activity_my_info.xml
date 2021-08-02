@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="20dp"
+        android:padding="20dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="8dp">
+///
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="101dp"
+                android:layout_height="101dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profile"
+                app:civ_border_color="#fff"
+                app:civ_border_width="0.7dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Siddarth Jain"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Android Developer/Enthusiast"
+                android:textColor="#c4c4c4"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25sp"
+                android:orientation="horizontal">
+
+               <!-- <ImageView
+                    android:id="@+id/web"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:onClick="openWeb"
+                    android:src="@drawable/web" />-->
+
+                <ImageView
+                    android:id="@+id/github"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="0dp"
+                    android:onClick="openGit"
+                    android:src="@drawable/github"
+                    android:layout_marginLeft="30dp" />
+
+                <ImageView
+                    android:id="@+id/insta"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="30dp"
+                    android:onClick="openInsta"
+                    android:src="@drawable/instagram"
+                    android:layout_marginLeft="30dp" />
+
+                <ImageView
+                    android:id="@+id/twitter"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="30dp"
+                    android:onClick="openTwitter"
+                    android:src="@drawable/twitter"
+                    android:layout_marginLeft="30dp" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+</LinearLayout>
