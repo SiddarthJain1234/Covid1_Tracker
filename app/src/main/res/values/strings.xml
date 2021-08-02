@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Covid19 Tracker</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="recovered">Recovered</string>
+    <string name="deaths">Deaths</string>
+    <string name="active">Active</string>
+    <string name="india_stats">india stats</string>
+    <string name="cases">Cases</string>
+    <string name="_0">0</string>
+    <string name="recovored">Recovored</string>
+
+    <string name="critical">Critical</string>
+
+
+    <string name="today_cases">Today Cases</string>
+
+    <string name="total_deaths">Total Deaths</string>
+
+    <string name="today_deaths">Today Deaths</string>
+
+    <string name="Tests">Tests</string>
+    <string name="track_states">Track states</string>
+    <string name="statename">statename</string>
+
+</resources>
