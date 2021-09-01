@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19Tracker">
-        <activity android:name=".MyInfo"></activity>
+        <activity android:name=".DetailActivity_District"></activity>
+        <activity android:name=".MyInfo" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".Affected_States" />
-        <activity android:name=".Affected_Districts"/>
+        <activity android:name=".Affected_Districts" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

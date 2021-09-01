@@ -58,7 +58,7 @@ public class Affected_Districts extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(this);
 
-        getSupportActionBar().setTitle("Affected Districts"+" of "+stateName);
+        getSupportActionBar().setTitle("Districts"+" of "+stateName);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -68,7 +68,7 @@ public class Affected_Districts extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(getApplicationContext(), DetailActivity.class).putExtra("position", position));
+                startActivity(new Intent(getApplicationContext(), DetailActivity_District.class).putExtra("position", position));
             }
         });
 
