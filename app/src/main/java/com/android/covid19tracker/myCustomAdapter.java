@@ -1,7 +1,6 @@
 package com.android.covid19tracker;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +31,7 @@ public class myCustomAdapter extends ArrayAdapter<stateModel> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_custom_item,null,true);
-        TextView tvStateName=view.findViewById(R.id.tvStateName);
+        TextView tvStateName=view.findViewById(R.id.tvName);
 
         tvStateName.setText(stateModelListFiltered.get(position).getState());
 

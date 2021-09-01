@@ -21,5 +21,13 @@
     <string name="Tests">Tests</string>
     <string name="track_states">Track states</string>
     <string name="statename">statename</string>
+    <string name="track_district">TRACK DISTRICT</string>
+
+    <string name="libs">\u2022 <b>Volley</b> for Network Calls.\n\u2022 <b>Eaze Graph</b> for showing Pie charts.\n\u2022 <b>Circle ImageView</b> for showing my pic.
+    </string>
+
+    <string name="credits">\u2022 <b>covid19india.org</b> for India specific API.
+         \n\u2022 <b>corona.lmao.ninja</b> for Global API.
+    </string>
 
 </resources>

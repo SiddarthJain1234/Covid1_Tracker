@@ -45,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
         tvCases = findViewById(R.id.tvCases);
         tvRecovered = findViewById(R.id.tvRecovered);
-        tvCritical = findViewById(R.id.tvCritical);
+        //tvCritical = findViewById(R.id.tvCritical);
         tvActive = findViewById(R.id.tvActive);
         tvTodayCases = findViewById(R.id.tvTodayCases);
         tvTotalDeaths = findViewById(R.id.tvTotalDeaths);
         tvTodayDeaths = findViewById(R.id.tvTodayDeaths);
-        tvTests = findViewById(R.id.tvTests);
+        //tvTests = findViewById(R.id.tvTests);
         scrollView = findViewById(R.id.scrollStats);
         pieChart = findViewById(R.id.piechart);
         progressBar = new ProgressDialog(this);
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void fetchData() {
 
-        String url  = "https://disease.sh/v3/covid-19/countries/India";
+        String url  = "https://disease.sh/v3/covid-19/gov/india";
 
         progressBar.show();
         progressBar.setContentView(R.layout.progress_dialog);
@@ -131,19 +131,19 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         try {
-                            JSONObject jsonObject = new JSONObject(response.toString());
-
+                            JSONObject jsonObject1 = new JSONObject(response);
+                             JSONObject jsonObject=jsonObject1.getJSONObject("total");
                             tvCases.setText(jsonObject.getString("cases"));
                             tvRecovered.setText(jsonObject.getString("recovered"));
-                            tvCritical.setText(jsonObject.getString("critical"));
+                            //tvCritical.setText(jsonObject.getString("critical"));
                             tvActive.setText(jsonObject.getString("active"));
                             tvTodayCases.setText(jsonObject.getString("todayCases"));
                             tvTotalDeaths.setText(jsonObject.getString("deaths"));
                             tvTodayDeaths.setText(jsonObject.getString("todayDeaths"));
-                            tvTests.setText(jsonObject.getString("tests"));
+                            //tvTests.setText(jsonObject.getString("tests"));
 
 
-                            pieChart.addPieSlice(new PieModel("Cases",Integer.parseInt(tvCases.getText().toString()), Color.parseColor("#FFA726")));
+                            //pieChart.addPieSlice(new PieModel("Cases",Integer.parseInt(tvCases.getText().toString()), Color.parseColor("#FFA726")));
                             pieChart.addPieSlice(new PieModel("Recoverd",Integer.parseInt(tvRecovered.getText().toString()), Color.parseColor("#66BB6A")));
                             pieChart.addPieSlice(new PieModel("Deaths",Integer.parseInt(tvTotalDeaths.getText().toString()), Color.parseColor("#EF5350")));
                             pieChart.addPieSlice(new PieModel("Active",Integer.parseInt(tvActive.getText().toString()), Color.parseColor("#29B6F6")));
@@ -183,4 +183,6 @@ public class MainActivity extends AppCompatActivity {
     public void goTrackStates(View view) {
         startActivity(new Intent(getApplicationContext(),Affected_States.class));
     }
+
+
 }

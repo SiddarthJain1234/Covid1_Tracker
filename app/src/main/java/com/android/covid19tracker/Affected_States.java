@@ -4,12 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -28,7 +26,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +42,7 @@ public class Affected_States extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_affected_states);
+        setContentView(R.layout.activity_affected_list);
 
         edtSearch = findViewById(R.id.edtSearch);
         listView = findViewById(R.id.listView);
@@ -54,6 +51,8 @@ public class Affected_States extends AppCompatActivity {
         getSupportActionBar().setTitle("Affected States");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
 
         fetchData();
 
@@ -91,18 +90,13 @@ public class Affected_States extends AppCompatActivity {
 
     }
 
-   /* @Override
-    protected void onPause() {
-        stateModelList=new ArrayList<>();
-        super.onPause();
-    }
 
-    @Override
-    protected void onStop() {
-        stateModelList=new ArrayList<>();
-        // trimCache(getApplicationContext());
-        super.onStop();
-    }*/
+
+
+
+
+
+
 
 
     @Override
@@ -113,7 +107,7 @@ public class Affected_States extends AppCompatActivity {
     }
 
     private void fetchData() {
-
+        //Log.d("what happen", "i am called ");
         String url  = "https://disease.sh/v3/covid-19/gov/india";
 
        /* simpleArcLoader.start();*/
@@ -127,6 +121,7 @@ public class Affected_States extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         try {
+                            stateModelList.clear();
                             JSONObject jsonObject1=new JSONObject(response);
 
                             JSONArray jsonArray=jsonObject1.getJSONArray("states");
