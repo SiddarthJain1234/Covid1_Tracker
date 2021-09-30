@@ -25,18 +25,18 @@ public class MyInfo extends AppCompatActivity {
     }
 
     public void openGit(View view) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.github.com/sidhu8300")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/piyushkothari1999/")));
 
     }
 
 
 
     public void openInsta(View view) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/siddarth097")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/piyush_kothari_07/")));
     }
 
     public void openTwitter(View view) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.twitter.com/siddart82032699")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.twitter.com/")));
     }
 
     @Override
